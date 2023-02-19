@@ -12,3 +12,5 @@ for elem in s[1] :
 print((' '.join(u)).strip())
 
 
+
+
