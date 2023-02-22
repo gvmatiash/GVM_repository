@@ -21,15 +21,18 @@ def try_shoot(target):
 
 def main(goal):
     print('Попробуй как можно быстрее найти правильную мишень!')
+    counter = 0
     while True:
         draw_target(target)
         hited_target = try_shoot(target)
         if int(hited_target) == goal:
             print('Вы угадали, с победой!')
+            print(f'Число попыток = {counter}')
             break
         else:
             target[int(hited_target)-1] = 'O'
             print('Мимо!')
+            counter += 1
 
         
 main(goal)
